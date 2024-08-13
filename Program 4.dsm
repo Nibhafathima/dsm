@@ -1,0 +1,17 @@
+#matrix Operation
+import numpy as np
+print("Matrix Operation")
+a=np.array([[2,4],[6,3]])
+b=np.array([[1,2],[3,5]])
+c=a+b
+d=a-b
+e=a*b
+f=np.dot(a,b)
+a_transpose=a.T
+print("\nMatrix A:\n",a)
+print("\nMatrix B:\n",b)
+print("\nAddition:\n",c)
+print("\nSubstraction:\n",d)
+print("\nMultiplication (Element-wise):\n",e)
+print("\nMultiplication (Row x Column):\n",f)
+print("\nTranspose:\n",a_transpose)
