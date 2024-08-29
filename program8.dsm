@@ -47,3 +47,10 @@ print(np.less(x, y))
 
 print("\nA<=B")
 print(np.less_equal(x, y))
+
+
+
+import numpy as np
+
+x = np.identity(3)
+print(x)
