@@ -32,6 +32,13 @@ print(y)
 print("\nA>B")
 print(np.greater(x, y))
 
+
+
+import numpy as np
+
+x = np.arange(start=30, stop=71, step=2)
+print(x)
+
 print("\nA>=B")
 print(np.greater_equal(x, y))
 
