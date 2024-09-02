@@ -106,3 +106,77 @@ df = pd.DataFrame(details)
   
 print(df)
 
+
+
+import pandas as pd
+
+df = pd.read_csv('5_Pandas.csv')
+
+print(df.to_string())
+
+
+import pandas as pd
+
+df = pd.DataFrame({'Name': ['e','a','a','b','c','d'],
+                   'Age': [1,2,1,3,3,4],
+                   'Rank': [0,1,2,3,4,5]})
+
+print(df.to_string())
+
+print('SORTED DATAFRAME')
+df = df.sort_values(by=['Name','Age'], ascending=[True,True])
+
+print(df.to_string())
+
+
+
+import pandas as pd
+
+data = {'Name': ['e','a','a','b','c','d'],
+                   'Age': [1,2,1,3,3,4],
+                   'Rank': [0,1,2,3,4,5]}
+
+index = {'a1', 'b1', 'c1', 'd1', 'e1','f1'}
+
+df = pd.DataFrame(data,index)
+#df.reset_index(inplace = True)
+print(df.to_string())
+df.reset_index(inplace = True, drop = True)
+print(df.to_string())
+
+import pandas as pd
+
+details = {
+    'Name' : ['a','b','c','d'],
+    'Age' : [24,25,26,27],
+}
+  
+
+df = pd.DataFrame(details)
+  
+print(df[:2])
+
+import pandas as pd
+
+details = {
+    'Name' : ['a','b','c','d','e'],
+    'Occupation' : ['A1','A1','A1','B1','B1'],
+    'Salary' : [20,30,40,27,23],
+}
+  
+
+df = pd.DataFrame(details)
+print(df)
+occ_average_age = df.groupby('Occupation')['Salary'].mean()
+print("Average salary per occupation : ")
+print(occ_average_age)
+
+
+import pandas as pd
+import numpy as np
+
+nums = {'Set_of_Numbers': [2, 3, 5, 7, 11, 13,np.nan, 19, 23, np.nan]}
+df = pd.DataFrame(nums, columns =['Set_of_Numbers'])
+df['Set_of_Numbers'] = df['Set_of_Numbers'].fillna(0)
+print(df)
+
