@@ -1,4 +1,4 @@
-jihiwhile True:
+nojihiwhile True:
     print("1.add")
     print("2.sub")
     print("3.mult")
@@ -71,4 +71,38 @@ plt.legend()
 plt.title("scores by group and gender")
 plt.show()
 
-   
+import pandas as pd
+
+names = ['a','b','c']
+x = pd.Series(names)
+print(names)
+
+
+import pandas as pd
+
+sr = pd.Series(pd.date_range('2021-05-01','2021-05-12',freq = 'D'))
+# To avoid dtype
+# Series.to_string
+print(sr.to_string(index=False))
+
+
+import pandas as pd
+
+details = {
+    'Name' : ['a','b','c','d'],
+    'Age' : [24,25,26,27],
+}
+  
+
+df = pd.DataFrame(details)
+  
+print(df)
+
+import pandas as pd
+
+details = [[1,2],[3,4]]
+  
+df = pd.DataFrame(details)
+  
+print(df)
+
