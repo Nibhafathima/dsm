@@ -30,3 +30,11 @@ while True:
 [2] import numpy as 3 import matplotlib Pyplot a Plt import pandas as pd import aklearn
  fron sklearn.model_selection Import train test split fran sklearn.motrics import confusion_matrix, accuracy_score,classification_repor fron sklearn.naive_bayes inport Gaussiantd fron sklearn.datasets inport load iris
 
+
+[9/11, 09:52] Nazeem Rizwi Mca: x_train,x_test,y_train,y_test-train_test_split(x,y,test_size-8.40)
+[9/11, 09:52] Nazeem Rizwi Mca: [5]
+x_train,x_test,y_train,y_test-train_test_split(x,y,test_size-8.40)
+classifier=GaussianNB() classifier.fit(x_train,y_train) y_pred=classifier.predict(x_test)
+[9/11, 09:53] Nazeem Rizwi Mca: result-confusion_matrix(y_test,y_pred) print("confusion_matrix") print(result)
+[9/11, 09:53] Nazeem Rizwi Mca: result2-classification report(y_testy_pred print("classification_report" print(result )
+[9/11, 09:54] Nazeem Rizwi Mca: result3-accuracy_score(y_test,y_pred print("accuracy" print(result3
