@@ -27,14 +27,23 @@ while True:
     else:
         print("invalid choice")
 
-[2] import numpy as 3 import matplotlib Pyplot a Plt import pandas as pd import aklearn
- fron sklearn.model_selection Import train test split fran sklearn.motrics import confusion_matrix, accuracy_score,classification_repor fron sklearn.naive_bayes inport Gaussiantd fron sklearn.datasets inport load iris
+from sklearn.datasets import load_iris
+from sklearn import metrics
+from sklearn import tree
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 
+iris=load_iris()
+x=iris.data
+y=iris.target
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3,random_state=1)
 
-[9/11, 09:52] Nazeem Rizwi Mca: x_train,x_test,y_train,y_test-train_test_split(x,y,test_size-8.40)
-[9/11, 09:52] Nazeem Rizwi Mca: [5]
-x_train,x_test,y_train,y_test-train_test_split(x,y,test_size-8.40)
-classifier=GaussianNB() classifier.fit(x_train,y_train) y_pred=classifier.predict(x_test)
-[9/11, 09:53] Nazeem Rizwi Mca: result-confusion_matrix(y_test,y_pred) print("confusion_matrix") print(result)
-[9/11, 09:53] Nazeem Rizwi Mca: result2-classification report(y_testy_pred print("classification_report" print(result )
-[9/11, 09:54] Nazeem Rizwi Mca: result3-accuracy_score(y_test,y_pred print("accuracy" print(result3
+clf=DecisionTreeClassifier()
+clf=clf.fit(x_train,y_train)
+y_pred=clf.predict(x_test)
+print("Accuracy: ",metrics.accuracy_score(y_test,y_pred))
+
+plt.figure(figsize=(15,15))
+tree.plot_tree(clf,fontsize=10,filled=True,rounded=True,class_names=iris.target_names,feature_names=iris.feature_names)
+plt.show()
